@@ -1,0 +1,11 @@
+<div class="flex-align-center">
+<img class="logo" (click)="handleClick('')" src="images/relias-logo-2023.png" alt="logo"/>
+<ul>
+    <li *ngFor="let item of menuItems" index="i"><a class="nav-link"><p>{{item.label}}</p><span class="menu-carat">v</span></a></li>
+</ul>
+</div>
+<div class="flex-align-center">
+    <img (click)="handleClick('search')" class="search-icon" src="svg/search.svg" alt="search"/>
+    <a class="nav-link" (click)="handleClick('login')"><p>Log In</p><span class="menu-carat">v</span></a>
+    <app-button title="REQUEST A DEMO" [highlight]=false (onClick)="handleClick('get-started')"></app-button>
+</div>

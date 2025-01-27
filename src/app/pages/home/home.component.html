@@ -1,0 +1,22 @@
+<div class="home-container-section-1">
+  <div class="home-container-child">
+    <h2>Healthcare Workforce Enablement Solutions</h2>
+    <h1>Smarter Workforce Management, Better Patient Care</h1>
+    <p>
+      Simplify complex healthcare challenges, leverage data insights, and
+      improve performance with the Relias Platform of connected solutions.
+    </p>
+  </div>
+  <div class="home-main-image">
+    <img src="images/home-main.webp" alt="home-main" />
+  </div>
+</div>
+<div class="home-container-section-2">
+    <img src="images/pieCircle.png" alt="pieCircle"/>
+    <div class="home-container-section-2-grid">
+      <div class="home-container-section-2-text" *ngFor="let content of homeContent" index="i">
+        <h3>{{content.head}}</h3>
+        <p>{{content.content}}</p>
+    </div>
+    </div>
+</div>
