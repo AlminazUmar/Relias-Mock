@@ -12,11 +12,47 @@
   </div>
 </div>
 <div class="home-container-section-2">
-    <img src="images/pieCircle.png" alt="pieCircle"/>
-    <div class="home-container-section-2-grid">
-      <div class="home-container-section-2-text" *ngFor="let content of homeContent" index="i">
-        <h3>{{content.head}}</h3>
-        <p>{{content.content}}</p>
+  <img src="images/pieCircle.png" alt="pieCircle" />
+  <div class="home-container-section-2-grid">
+    <div
+      class="home-container-section-2-text"
+      *ngFor="let content of homeContent"
+      index="i"
+    >
+      <h3>{{ content.head }}</h3>
+      <p>{{ content.content }}</p>
+      <h2>LEARN MORE <a></a></h2>
     </div>
+  </div>
+</div>
+<div class="home-container-section-3">
+  <div class="left-border"></div>
+  <div class="home-container-section-3-content">
+    <div>
+      <h3>Why Relias</h3>
     </div>
+    <div class="home-container-section-3-content-main">
+      <div class="home-container-section-3-accordian">
+        <ng-container *ngFor="let content of homeContentSection3; index as i">
+          <div class="home-container-section-3-accordian-content" (click)="handleSection3Click(i)">
+            <div class="home-container-section-3-accordian-content-title">
+              <h2>{{ content.title }}</h2>
+              <span *ngIf="section3Active !== i"
+                ><i class="material-icons">keyboard_arrow_down</i></span
+              >
+              <span *ngIf="section3Active === i"
+                ><i class="material-icons">keyboard_arrow_up</i></span
+              >
+            </div>
+            <h2 *ngIf="section3Active===i">{{content.content}}</h2>
+            <h3 *ngIf="section3Active===i">LEARN MORE <a></a></h3>
+          </div>
+        </ng-container>
+      </div>
+      <img class="home-container-section-3-image" [src]="section3ActiveImage" alt="image"/>
+    </div>
+  </div>
+</div>
+<div class="home-container-section-4">
+
 </div>

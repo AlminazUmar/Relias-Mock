@@ -5,6 +5,7 @@
   .home-container-section-1 {
     display: flex;
     flex-direction: row;
+    max-width: 87.5rem;
     .home-container-child {
       flex: 1;
       padding: 4.5rem;
@@ -44,20 +45,21 @@
       }
     }
   }
-  .home-container-section-2{
+  .home-container-section-2 {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     max-width: 87.5rem;
-    img{
-        width:47.1rem;
+    padding: 4.5rem;
+    img {
+      width: 47.1rem;
     }
-    &-grid{
+    &-grid {
       display: grid;
-      grid-template-columns:repeat(3, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       grid-template-rows: auto auto;
-      gap:1.875rem;
+      gap: 1.875rem;
       // align-items: center;
       justify-content: center;
     }
@@ -70,25 +72,142 @@
       grid-column: span 2;
       justify-self: center;
     }
-    &-text{
+    &-text {
       display: flex;
       flex-direction: column;
-      h3{
+      gap: 1rem;
+      h3 {
         font-size: 1rem;
         font-weight: 600;
         line-height: 1.5rem;
         color: #272727;
-        margin: 1rem 0;
         letter-spacing: 0.0625rem;
         text-align: left;
+        margin: 0;
       }
-      p{
+      p {
         font-size: 1rem;
-        font-weight:400;
+        font-weight: 400;
         line-height: 1.5;
-        color:#272727;
+        color: #272727;
         text-align: left;
       }
+      h2 {
+        color: #34954a;
+        font-size: 0.875rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        line-height: 1.445rem;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        transition: gap 0.3s ease;
+        cursor: pointer;
+      }
+      h2:hover {
+        gap: 0.8rem;
+      }
+      a::after {
+        content: "→";
+        display: block;
+        font-size: 1.5rem;
+        left: 6px;
+        position: relative;
+      }
+    }
+  }
+  .home-container-section-3 {
+    // max-width: 1400px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background-color: #f4f4f2;
+    width: 100%;
+    .left-border {
+      position: absolute;
+      top: 0;
+      left: 125px;
+      height: 114px;
+      display: block;
+      border-left: 2px solid #063028;
+    }
+    &-content {
+      padding: 4.5rem;
+      display: flex;
+      flex-direction: column;
+      max-width: 1400px;
+      width: 100%;
+      h3 {
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 2.1rem;
+        color: #063028;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+      }
+      &-main {
+        display: flex;
+        width: 100%;
+        gap: 30px;
+      }
+    }
+    &-accordian {
+      width: 50%;
+      h2 {
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 0.0625rem;
+        cursor: pointer;
+        line-height: 1.5;
+        text-align: left;
+      }
+      &-content {
+        &-title {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        cursor: pointer;
+        padding: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        h3 {
+          margin:0rem;
+          color: #34954a;
+          font-size: 0.875rem;
+          font-weight: 600;
+          letter-spacing: 2px;
+          line-height: 1.445rem;
+          text-transform: uppercase;
+          display: flex;
+          flex-direction: row;
+          gap: 0.5rem;
+          transition: gap 0.3s ease;
+          cursor: pointer;
+        }
+        h3:hover {
+          gap: 0.8rem;
+        }
+        a::after {
+          content: "→";
+          display: block;
+          font-size: 1.5rem;
+          left: 6px;
+          position: relative;
+        }
+      }
+      .home-container-section-3-accordian-content:first-child {
+        border-top: 1px solid #ccc;
+      }
+      .home-container-section-3-accordian-content {
+        border-bottom: 1px solid #ccc;
+      }
+    }
+    &-image {
+      width: 50%;
+      max-height:25.5rem
     }
   }
 }
